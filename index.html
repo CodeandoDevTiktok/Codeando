@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Codeando</title>
+  <style>
+    :root {
+      --bg: #111;                /* fondo principal */
+      --fg: #eee;                /* texto claro */
+      --primary: #00AAFF;        /* azul acento */
+      --muted: #666;             /* texto secundario */
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    header {
+      background: var(--primary);
+      padding: 1rem 0;
+      text-align: center;
+    }
+    header h1 {
+      color: var(--bg);
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+    nav {
+      margin-top: 0.5rem;
+    }
+    nav a {
+      color: var(--bg);
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+      transition: opacity 0.2s;
+    }
+    nav a:hover {
+      opacity: 0.7;
+    }
+
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid var(--primary);
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    section + section {
+      margin-top: 2.5rem;
+    }
+
+    section h2 {
+      color: var(--primary);
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    /* Ajuste responsivo del embed */
+    .tiktok-embed {
+      width: 100% !important;
+      max-width: 360px;
+      margin: 0 auto 1rem;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .buttons a {
+      padding: 0.6rem 1.2rem;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    .buttons a:hover {
+      background: var(--primary);
+      color: var(--bg);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.8rem;
+      color: var(--muted);
+      background: #141414;
+    }
+  </style>
+  <script src="https://www.tiktok.com/embed.js"></script>
+</head>
+<body>
+
+  <header>
+    <h1>Codeando</h1>
+    <nav>
+      <a href="#acerca">Acerca</a>
+      <a href="#videos">Videos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sección Acerca -->
+    <section id="acerca">
+      <img
+        src="https://avatars.githubusercontent.com/u/22210107?v=4"
+        alt="Avatar codeando"
+        class="profile-pic"
+      >
+      <h2>¡Hola! Soy Codeando</h2>
+      <p>Experimento programando y ofrezco asesorías personalizadas en Python, C++, .NET y más.</p>
+    </section>
+
+    <!-- Sección Video -->
+    <section id="videos">
+      <h2>🎬 Mi video más visto</h2>
+      <iframe
+        src="https://www.tiktok.com/embed/7250659946474261766"
+        width="325"
+        height="750"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+      
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto">
+      <h2>🔗 ¡Conéctate!</h2>
+      <div class="buttons">
+        <a href="https://www.tiktok.com/@codeando.dev" target="_blank">TikTok</a>
+        <a href="https://kick.com/codeando" target="_blank">Kick</a>
+        <a href="https://github.com/CodeandoDevTiktok" target="_blank">GitHub</a>
+        <a href="https://linktr.ee/codeando" target="_blank">Linktree</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 codeando.dev — Creado con ❤️
+  </footer>
+
+</body>
+</html>
